@@ -1,16 +1,18 @@
-# Claude Chat for Obsidian
+# LLM Chat Interface for Obsidian
 
 <div align="center">
-  <img src="https://i.imgur.com/YourImageID.png" alt="Claude Chat Interface" width="800"/>
+  <img src="https://imgur.com/a/72eYafg" alt="Obsidian AI Interface" width="800"/>
 </div>
 
 ## 🌟 Overview
 
-Claude Chat transforms Obsidian into an intelligent knowledge amplification system by seamlessly integrating Claude 3.5 Sonnet directly into your note-taking workflow. It's not just another chat interface – it's a dynamic system that grows with your knowledge base, creating an ever-evolving digital mind palace.
+Obsidian AI transforms Obsidian into an intelligent knowledge amplification system by seamlessly integrating Claude 3.5 Sonnet directly into your note-taking workflow. It's not just another chat interface – it's a dynamic system that grows with your knowledge base, creating an ever-evolving digital mind palace.
+
+Right now only Claude 3.5 Sonnet is supported, but I'm working on adding support for other APIS as well as support for local models.
 
 ### 🧠 Core Concept
 
-Imagine a system where every conversation with your AI assistant becomes a permanent, living part of your knowledge ecosystem. Where insights aren't just exchanged and forgotten, but woven into the fabric of your digital consciousness. Claude Chat creates this reality by:
+Imagine a system where every conversation with your AI assistant becomes a permanent, living part of your knowledge ecosystem. Where insights aren't just exchanged and forgotten, but woven into the fabric of your digital consciousness. Obsidian AI creates this reality by:
 
 - Preserving every interaction with perfect fidelity
 - Building contextual bridges between conversations and notes
@@ -45,12 +47,12 @@ The result? A continuously expanding network of interconnected thoughts, insight
 
 1. Open Obsidian Settings
 2. Navigate to Community Plugins
-3. Search for "Claude Chat"
+3. Search for "Obsidian AI"
 4. Click Install, then Enable
 
 ## ⚙️ Configuration
 
-1. Get your Claude API key from Anthropic
+1. Get your API key from Anthropic
 2. Open plugin settings
 3. Enter your API key
 4. Customize conversation folder and shortcuts
