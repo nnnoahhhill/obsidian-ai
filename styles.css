@@ -1,0 +1,318 @@
+.claude-chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--background-primary);
+    color: var(--text-normal);
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 85%;
+}
+
+.message.user {
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.message.assistant {
+    background: var(--background-modifier-form-field);
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.message-header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.message-content {
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+.message-content.markdown-rendered {
+    font-size: 0.95em;
+}
+
+.message-content.markdown-rendered p:first-child {
+    margin-top: 0;
+}
+
+.message-content.markdown-rendered p:last-child {
+    margin-bottom: 0;
+}
+
+.error-message {
+    color: var(--text-error);
+    background: var(--background-modifier-error);
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.context-section {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.selected-contexts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.selected-context {
+    background-color: var(--background-modifier-border);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9em;
+}
+
+.context-file-name {
+    font-weight: 500;
+}
+
+.context-file-path {
+    color: var(--text-muted);
+    font-size: 0.85em;
+}
+
+.selected-context button {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1;
+    margin-left: 0.5rem;
+}
+
+.selected-context button:hover {
+    color: var(--text-normal);
+}
+
+.context-search {
+    position: relative;
+    flex: 1;
+    max-width: 70%;
+}
+
+.context-search input {
+    width: 100%;
+    height: 2.2rem;
+    font-size: 0.9em;
+}
+
+.context-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    margin-top: 0.25rem;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.context-search-result {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.context-search-result:last-child {
+    border-bottom: none;
+}
+
+.context-search-result:hover {
+    background: var(--background-modifier-hover);
+}
+
+.context-result-path {
+    font-size: 0.85em;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.context-result-preview {
+    font-size: 0.9em;
+    color: var(--text-normal);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.message-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.message-form textarea {
+    flex: 1;
+    min-height: 38px;
+    max-height: 200px;
+    resize: vertical;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-primary);
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.4;
+}
+
+.message-form button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    background: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.message-form button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.message-form button:not(:disabled):hover {
+    background: var(--interactive-accent-hover);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .claude-chat {
+        padding: 0.5rem;
+    }
+
+    .message {
+        max-width: 95%;
+    }
+
+    .message-form textarea {
+        min-height: 80px;
+    }
+
+    .context-search-results {
+        max-height: 250px;
+    }
+}
+
+.conversation-selector {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: var(--background-secondary);
+    border-radius: 4px;
+}
+
+.conversation-dropdown {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    background: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.conversation-dropdown:hover {
+    border-color: var(--interactive-accent);
+}
+
+.conversation-dropdown:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+    box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+}
+
+.conversation-dropdown option {
+    background: var(--background-primary);
+    color: var(--text-normal);
+    padding: 0.5rem;
+}
+
+.include-all-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.include-all-toggle label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    color: var(--text-normal);
+    font-weight: 500;
+}
+
+.include-all-toggle input[type="checkbox"] {
+    margin: 0;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--text-muted);
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.include-all-toggle input[type="checkbox"]:checked {
+    background-color: var(--interactive-accent);
+    border-color: var(--interactive-accent);
+}
+
+.include-all-toggle:hover {
+    background: var(--background-modifier-hover);
+}
+
+.include-all-toggle:hover label {
+    color: var(--text-accent);
+}
+
+.message-input {
+    width: 100%;
+    min-height: 100px;
+    font-size: 0.9em;
+    line-height: 1.4;
+    padding: 0.8rem;
+    resize: vertical;
+} 
