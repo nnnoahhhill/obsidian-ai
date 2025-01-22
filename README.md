@@ -1,7 +1,7 @@
 # LLM Chat Interface for Obsidian
 
 <div align="center">
-  <img src="https://imgur.com/a/obsidian-ai-72eYafg" alt="Obsidian AI Interface" width="800"/>
+  <img src="https://i.imgur.com/suTa1dg.png" alt="Obsidian AI Interface" width="800"/>
 </div>
 
 ## 🌟 Overview
