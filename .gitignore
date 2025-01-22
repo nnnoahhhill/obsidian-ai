@@ -45,3 +45,8 @@ CVS
 Backup[ ]of[ ]*.pages/
 Backup[ ]of[ ]*.key/
 Backup[ ]of[ ]*.numbers/
+
+# node stuff
+node_modules/
+package-lock.json
+package.json
