@@ -50,3 +50,6 @@ Backup[ ]of[ ]*.numbers/
 node_modules/
 package-lock.json
 package.json
+
+# plugin specific stuff
+data.json
